@@ -19,8 +19,8 @@ export default function Calculator() {
     <div>
       <h2 className="font-semibold">Taschenrechner</h2>
       <div className="mt-2 flex gap-2">
-        <input className="p-1 border rounded flex-1" value={expr} onChange={e=>setExpr(e.target.value)} placeholder="z.B. 12*(3+4)" />
-        <button className="px-2 py-1 bg-green-500 text-white rounded" onClick={calc}>=</button>
+        <input className="input flex-1" value={expr} onChange={e=>setExpr(e.target.value)} placeholder="z.B. 12*(3+4)" />
+        <button className="btn btn-primary" onClick={calc}>=</button>
       </div>
       <div className="mt-2">Ergebnis: <span className="font-mono">{res}</span></div>
     </div>

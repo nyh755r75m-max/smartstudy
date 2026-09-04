@@ -21,16 +21,16 @@ export default function ChatMock(){
   return (
     <div>
       <h2 className="font-semibold">KI‑Chat (Mock)</h2>
-      <div className="mt-2 p-2 border rounded h-40 overflow-auto bg-white">
+      <div className="mt-2 p-2 rounded h-40 overflow-auto" style={{background:'rgba(255,255,255,0.6)'}}>
         {messages.map((m,i)=>(
           <div key={i} className={`mb-2 ${m.from==="bot" ? "text-left" : "text-right"}`}>
-            <div className={`inline-block px-2 py-1 rounded ${m.from==="bot" ? "bg-gray-100" : "bg-blue-200"}`}>{m.text}</div>
+            <div className={m.from==="bot"? 'chat-bot' : 'chat-user'}>{m.text}</div>
           </div>
         ))}
       </div>
       <div className="mt-2 flex gap-2">
-        <input className="flex-1 p-1 border rounded" value={text} onChange={e=>setText(e.target.value)} placeholder="Frage an Bot" />
-        <button className="px-2 py-1 bg-blue-500 text-white rounded" onClick={send}>Senden</button>
+        <input className="input flex-1" value={text} onChange={e=>setText(e.target.value)} placeholder="Frage an Bot" />
+        <button className="btn btn-primary" onClick={send}>Senden</button>
       </div>
     </div>
   );

@@ -38,7 +38,7 @@ export default function Sounds(){
     <div>
       <h2 className="font-semibold">Hintergrund‑Geräusche</h2>
       <div className="mt-2 flex items-center gap-2">
-        <button className="px-2 py-1 border rounded" onClick={playing ? stop : start}>{playing ? "Stop" : "Play"}</button>
+        <button className={`btn ${playing? 'btn-soft':'btn-primary'}`} onClick={playing ? stop : start}>{playing ? "Stop" : "Play"}</button>
         <input type="range" min={0} max={1} step={0.01} value={volume} onChange={e=>setVolume(Number(e.target.value))} />
       </div>
       <div className="text-sm text-gray-600 mt-2">Einfacher Ton als Platzhalter (kein Datei‑Upload).</div>

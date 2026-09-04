@@ -7,15 +7,15 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
   const [theme, setTheme] = useLocalStorage<string>("smartstudy:theme", "blue");
 
   const colors: Record<string, string> = {
-    blue: "bg-blue-50 text-blue-900",
-    green: "bg-green-50 text-green-900",
-    purple: "bg-purple-50 text-purple-900",
+    blue: "bg-blue-100 text-blue-800",
+    green: "bg-green-100 text-green-800",
+    purple: "bg-purple-100 text-purple-800",
     dark: "bg-gray-900 text-white"
   };
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, colors }}>
-      <div className={colors[theme] + " min-h-screen"}>
+      <div className={colors[theme] + " min-h-screen transition-colors duration-300"}>
         {children}
       </div>
     </ThemeContext.Provider>

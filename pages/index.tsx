@@ -14,26 +14,26 @@ export default function Home() {
       <Head>
         <title>smartstudy</title>
       </Head>
-      <div className="max-w-4xl mx-auto p-4 space-y-6">
+      <div className="max-w-4xl mx-auto p-6 space-y-6">
         <header className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold">smartstudy</h1>
+          <h1 className="text-3xl header-title">smartstudy</h1>
           <div className="flex gap-2">
-            <select value={theme} onChange={(e) => setTheme(e.target.value)} className="p-1 rounded border">
-              <option value="blue">Blau</option>
-              <option value="green">Grün</option>
-              <option value="purple">Lila</option>
+            <select value={theme} onChange={(e) => setTheme(e.target.value)} className="input">
+              <option value="blue">Pastell Blau</option>
+              <option value="green">Pastell Grün</option>
+              <option value="purple">Pastell Lila</option>
               <option value="dark">Dunkel</option>
             </select>
           </div>
         </header>
 
         <main className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <section className="p-4 bg-white rounded shadow"><ToDo/></section>
-          <section className="p-4 bg-white rounded shadow"><Flashcards/></section>
-          <section className="p-4 bg-white rounded shadow"><Timer/></section>
-          <section className="p-4 bg-white rounded shadow"><Calculator/></section>
-          <section className="p-4 bg-white rounded shadow"><Sounds/></section>
-          <section className="p-4 bg-white rounded shadow"><ChatMock/></section>
+          <section className="card"><ToDo/></section>
+          <section className="card"><Flashcards/></section>
+          <section className="card"><Timer/></section>
+          <section className="card"><Calculator/></section>
+          <section className="card"><Sounds/></section>
+          <section className="card"><ChatMock/></section>
         </main>
       </div>
     </>

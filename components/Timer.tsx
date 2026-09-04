@@ -22,9 +22,9 @@ export default function Timer() {
     <div>
       <h2 className="font-semibold">Lern‑Timer</h2>
       <div className="mt-2 flex items-center gap-2">
-        <input type="number" className="p-1 w-20 border rounded" value={minutes} onChange={e=>setMinutes(Number(e.target.value))} /> Min
-        <button className="px-2 py-1 bg-blue-500 text-white rounded" onClick={()=>setRunning(!running)}>{running ? "Stop" : "Start"}</button>
-        <button className="px-2 py-1 border rounded" onClick={()=>{ setRunning(false); setRemaining(0); }}>Reset</button>
+        <input type="number" className="input w-20" value={minutes} onChange={e=>setMinutes(Number(e.target.value))} /> Min
+        <button className="btn btn-primary" onClick={()=>setRunning(!running)}>{running ? "Stop" : "Start"}</button>
+        <button className="btn btn-soft" onClick={()=>{ setRunning(false); setRemaining(0); }}>Reset</button>
       </div>
       <div className="mt-3 text-2xl font-mono">{display}</div>
     </div>

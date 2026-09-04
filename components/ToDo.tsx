@@ -17,8 +17,8 @@ export default function ToDo() {
     <div>
       <h2 className="font-semibold">To‑Do / Lernplan</h2>
       <div className="flex gap-2 mt-2">
-        <input className="flex-1 p-2 border rounded" value={text} onChange={e=>setText(e.target.value)} placeholder="Neue Aufgabe" />
-        <button className="px-3 py-2 bg-blue-500 text-white rounded" onClick={add}>+</button>
+        <input className="flex-1 input" value={text} onChange={e=>setText(e.target.value)} placeholder="Neue Aufgabe" />
+        <button className="btn btn-primary" onClick={add}>+</button>
       </div>
       <ul className="mt-3 space-y-2">
         {items.map(i=>(

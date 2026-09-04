@@ -14,12 +14,12 @@ export default function Flashcards() {
       <h2 className="font-semibold">Karteikarten</h2>
       <div className="mt-2">
         <div className="flex gap-2">
-          <input value={q} onChange={e=>setQ(e.target.value)} className="p-1 border rounded flex-1" placeholder="Frage" />
-          <input value={a} onChange={e=>setA(e.target.value)} className="p-1 border rounded flex-1" placeholder="Antwort" />
-          <button className="px-2 bg-green-500 text-white rounded" onClick={add}>Hinzufügen</button>
+          <input value={q} onChange={e=>setQ(e.target.value)} className="input flex-1" placeholder="Frage" />
+          <input value={a} onChange={e=>setA(e.target.value)} className="input flex-1" placeholder="Antwort" />
+          <button className="btn btn-primary" onClick={add}>Hinzufügen</button>
         </div>
         {cards.length>0 ? (
-          <div className="mt-3 p-3 border rounded">
+          <div className="mt-3 p-3 rounded border" style={{background:'rgba(255,255,255,0.6)'}}>
             <div className="font-medium">Frage:</div>
             <div>{cards[index].q}</div>
             <details className="mt-2">
@@ -27,8 +27,8 @@ export default function Flashcards() {
               <div className="mt-1">{cards[index].a}</div>
             </details>
             <div className="flex gap-2 mt-2">
-              <button onClick={()=>setIndex((index-1+cards.length)%cards.length)} className="px-2 border rounded">Zurück</button>
-              <button onClick={()=>setIndex((index+1)%cards.length)} className="px-2 border rounded">Nächste</button>
+              <button className="btn btn-soft" onClick={()=>setIndex((index-1+cards.length)%cards.length)}>Zurück</button>
+              <button className="btn btn-soft" onClick={()=>setIndex((index+1)%cards.length)}>Nächste</button>
             </div>
           </div>
         ) : <div className="mt-3 text-sm text-gray-500">Keine Karten</div>}
